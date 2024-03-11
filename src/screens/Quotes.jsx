@@ -19,7 +19,7 @@ function Quotes() {
       <h1>All the Quotes!</h1>
       <div className="quotes-container">
         {
-          quotes.map((quote) => (
+          quotes?.map((quote) => (
             <Quote quote={quote} key={quote._id} />
           ))
         }
