@@ -27,7 +27,7 @@ function CharacterCreate() {
     const { name, value } = e.target;
 
     setCharacter((prevCharacter) => ({
-      prevCharacter,
+      ...prevCharacter,
       [name]: value,
     }));
   };

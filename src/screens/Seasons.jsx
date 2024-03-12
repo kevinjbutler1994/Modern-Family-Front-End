@@ -14,17 +14,24 @@ function Seasons () {
     fetchSeasons()
   }, [])
 
+
+
+
+
+
   return (
     <div>
       <h1>All the Seasons!</h1>
       <div className="seasons-container">
         {
           seasons?.map((season) => (
-            <Season season={season} key={season._id} />
+            <Season season={season} key={season.season}  />
           ))
         }
       </div>
     </div>
+
+
   )
 }
 

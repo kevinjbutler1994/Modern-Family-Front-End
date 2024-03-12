@@ -27,12 +27,14 @@ function CharacterDetail() {
       <h1>Hello, I'm {character.fullName}</h1> 
       <h2>also known as {character.aliases}</h2>
       <img src={character.picture} alt={character.fullName} />
-      <p>{character.occupation}</p>
-      <p>{character.gender}</p>
-      <p>{character.family}</p>
+      <p>Job: {character.occupation}</p>
+      <p>Gender: {character.gender}</p>
+      <p>Family Members:{character.family}</p>
+      <p> Date of Birth: {character.dateOfBirth}</p>
+      <p>Played by: {character.actor}</p>
       <div>
         <Link to={`/characters/${id}/edit`}>
-          <button>EDIT</button>
+          <button>Edit Character</button>
         </Link>
         <button onClick={handleDelete}>Delete Character</button>
       </div>

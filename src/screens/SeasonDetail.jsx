@@ -21,7 +21,7 @@ function SeasonDetail() {
   return (
     <div>
       <h1>Season: {season.season}</h1> 
-      <h2>Episodes: {season.epsidoes}</h2>
+      <h2>Episodes: {season.episodes}</h2>
       <h3>Overview: {season.overview}</h3>
     </div>
   )

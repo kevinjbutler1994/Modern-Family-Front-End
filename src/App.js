@@ -21,6 +21,7 @@ function App() {
         <Route path='/quotes' element={<Quotes />} />
         <Route path='/seasons' element={<Seasons />} />
         <Route path='/seasons/:id' element={<SeasonDetail />} />
+        <Route path='/quotes/:id' element={<QuoteDetail />} />
         <Route path="/characters/:id" element={<CharacterDetail />} />
         <Route path="/add-character" element={<CharacterCreate />} />
         <Route path="/characters/:id/edit" element={<CharacterEdit />} />

@@ -4,10 +4,14 @@ import { getCharacter, editCharacter } from "../services/characters.js";
 
 function CharacterEdit() {
   const [character, setCharacter] = useState({
-    name: "",
-    aka: "",
-    job: "",
-    image: "",
+    fullName: "",
+    aliases: "",
+    gender: "",
+    occupation: "",
+    family: "",
+    dateofBirth: "",
+    actor: "",
+    picture: "",
   });
 
   let { id } = useParams()

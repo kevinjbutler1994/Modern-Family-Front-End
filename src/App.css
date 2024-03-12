@@ -5,15 +5,22 @@
 .Home {text-align: center;
 font-size: 60rem;}
 
+.characters-container {
+  display: flex;
+  gap: 20px;
 img{
   width: 70px;
   height: 90px;
   }
-
-  .character-container {
-  display: flex;
-  gap: 20px;
-  img{
-    width: 30px;
-    }
 }
+
+.landingPageContainer {
+
+  
+}
+
+.Quotes {
+  text-align: left;
+  color:blue
+}
+

@@ -1,34 +1,30 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import { getQuotes } from "../services/quotes.js";
-import Quote from '../components/Quote.jsx';
+import Quote from "../components/Quote.jsx";
 
 function Quotes() {
-  const [quotes, setQuotes] = useState([])
+  const [quotes, setQuotes] = useState([]);
 
   async function fetchQuotes() {
-    const allQuotes = await getQuotes()
-    setQuotes(allQuotes)
+    const allQuotes = await getQuotes();
+    setQuotes(allQuotes);
   }
 
   useEffect(() => {
-    fetchQuotes()
-  }, [])
+    fetchQuotes();
+  }, []);
 
   return (
     <div>
-      <h1>All the Quotes!</h1>
+      <h1>Quotes</h1>
+      <h1>Select quotes that we all know and love</h1>
       <div className="quotes-container">
-        {
-          quotes?.map((quote) => (
-            <Quote quote={quote} key={quote._id} />
-          ))
-        }
+        {quotes?.map((quote) => (
+          <Quote quote={quote} key={quote.saidBy} />
+        ))}
       </div>
     </div>
-  )
+  );
 }
 
-export default Quotes
-
-
-
+export default Quotes;
