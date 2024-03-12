@@ -44,8 +44,8 @@ function CharacterEdit() {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Please add the character's name"
-          name="name"
+          placeholder="Full Name"
+          name="fullName"
           value={character.fullName}
           onChange={handleChange}
         />
@@ -58,14 +58,42 @@ function CharacterEdit() {
         />
         <input
           type="text"
-          placeholder="Profession"
+          placeholder="Gender"
+          name="gender"
+          value={character.gender}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          placeholder="Occupation"
           name="occupation"
           value={character.occupation}
           onChange={handleChange}
         />
         <input
           type="text"
-          placeholder="Add image url"
+          placeholder="Family"
+          name="family"
+          value={character.family}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          placeholder="Date of Birth"
+          name="dateofBirth"
+          value={character.dateofBirth}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          placeholder="Actor"
+          name="actor"
+          value={character.actor}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          placeholder="Image URL"
           name="picture"
           value={character.picture}
           onChange={handleChange}

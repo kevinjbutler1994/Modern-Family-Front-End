@@ -5,12 +5,15 @@
 .Home {text-align: center;
 font-size: 60rem;}
 
-.character-images {
-  height: 30rem;
-  width: 30rem;
-}
+img{
+  width: 70px;
+  height: 90px;
+  }
 
-.character-container {
+  .character-container {
   display: flex;
   gap: 20px;
+  img{
+    width: 30px;
+    }
 }
