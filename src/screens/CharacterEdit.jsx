@@ -38,15 +38,6 @@ function CharacterEdit() {
     }));
   };
 
-  const handleCheckboxChange = (e) => {
-    const { name, checked } = e.target;
-
-    setCharacter((prevCharacter) => ({
-      ...prevCharacter,
-      [name]: checked,
-    }));
-  };
-
   return (
     <div>
       <h1>Update your character! </h1>
@@ -61,19 +52,22 @@ function CharacterEdit() {
         <input
           type="text"
           placeholder="Nickname"
-          name="aka"
+          name="aliases"
+          value={character.aliases}
           onChange={handleChange}
         />
         <input
           type="text"
           placeholder="Profession"
-          name="Profession"
+          name="occupation"
+          value={character.occupation}
           onChange={handleChange}
         />
         <input
           type="text"
           placeholder="Add image url"
-          name="image"
+          name="picture"
+          value={character.picture}
           onChange={handleChange}
         />
         <button type="submit">Update</button>

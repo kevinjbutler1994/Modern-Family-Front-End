@@ -6,7 +6,7 @@ function Seasons () {
   const [seasons, setSeasons] = useState([])
 
   async function fetchSeasons() {
-    const allSeasons = await getSeaons()
+    const allSeasons = await getSeasons()
     setSeasons(allSeasons)
   }
 

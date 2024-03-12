@@ -20,7 +20,7 @@ function CharacterCreate() {
     e.preventDefault();
 
     await createCharacter(character);
-    // navigate('/characters')
+    navigate('/characters')
   };
 
   const handleChange = (e) => {
@@ -32,79 +32,70 @@ function CharacterCreate() {
     }));
   };
 
-  const handleCheckboxChange = (e) => {
-    const { name, checked } = e.target;
-    setCharacter((prevCharacter) => ({
-      prevCharacter,
-      [name]: checked,
-    }));
-  };
   return (
     <div>
       <h1>Add a new character to the Database!</h1>
-      <form>
-        {" "}
-        {handleSubmit}
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Full Name"
-          name="Full Name"
+          name="fullName"
           value={character.fullName}
           onChange={handleChange}
         />
         <input
           type="text"
           placeholder="Nickname"
-          name="Nickname"
+          name="aliases"
           value={character.aliases}
           onChange={handleChange}
         />
         <input
           type="text"
           placeholder="Gender"
-          name="Gender"
+          name="gender"
           value={character.gender}
           onChange={handleChange}
         />
         <input
           type="text"
           placeholder="Occupation"
-          name="Occupation"
+          name="occupation"
           value={character.occupation}
           onChange={handleChange}
         />
         <input
           type="text"
           placeholder="Family"
-          name="Family"
+          name="family"
           value={character.family}
           onChange={handleChange}
         />
         <input
           type="text"
           placeholder="Date of Birth"
-          name="Date of Birth"
+          name="dateofBirth"
           value={character.dateofBirth}
           onChange={handleChange}
         />
         <input
           type="text"
           placeholder="Actor"
-          name="Actor"
+          name="actor"
           value={character.actor}
           onChange={handleChange}
         />
         <input
           type="text"
           placeholder="Image URL"
-          name="image url"
+          name="picture"
           value={character.picture}
           onChange={handleChange}
         />
         <button type="submit">Add new Character!</button>
       </form>
     </div>
-  );
-}
+)};
+
 
 export default CharacterCreate;

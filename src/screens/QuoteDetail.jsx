@@ -1,16 +1,15 @@
 import { useState, useEffect } from 'react';
 import { getQuote } from "../services/quotes.js";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams} from "react-router-dom";
 
 function    QuoteDetail() {
   const [quote, setQuote] = useState({})
 
   let { id } = useParams()
-  let navigate = useNavigate()
 
   const fetchQuote = async () => {
     const oneQuote = await getQuote(id)
-    setCharacter(oneQuote)
+    setQuote(oneQuote)
   }
 
   useEffect(() => {

@@ -18,9 +18,9 @@ export const getCharacter = async (id) => {
 }
 };
 
-export const createCharacter = async (catData) => {
+export const createCharacter = async (characterData) => {
         try { 
-        const response = await api.post('/characters', catData);
+        const response = await api.post('/characters', characterData);
         return response.data;
     } catch (error) {
         console.error('Error creating character:', error);
@@ -39,7 +39,7 @@ export const createCharacter = async (catData) => {
 
     export const deleteCharacter = async (id) => {
         try { 
-        const response = await api.delete(`/characters${id}`);
+        const response = await api.delete(`/characters/${id}`);
         return response.data;
     } catch (error) {
         console.error('Error deleting character: ', error);
