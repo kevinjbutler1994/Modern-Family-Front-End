@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getSeasons } from "../services/seasons.js";
 import Season from '../components/Season.jsx';
+import { parseInt } from 'lodash';
 
 function Seasons () {
   const [seasons, setSeasons] = useState([])
@@ -27,6 +28,7 @@ function Seasons () {
           seasons?.map((season) => (
             <Season season={season} key={season.season}  />
           ))
+          .sort((a, b) => parseInt(a.key) > parseInt(b.key) ? 1 : -1)
         }
       </div>
     </div>
